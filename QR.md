@@ -270,3 +270,74 @@ q quelle est l'utilité d'un langage côté serveur ?
 r stabilité, gestion des données, sécurité des données
 
 
+## gestion de projet
+
+q dans quel dossier peut-on créer un projet ?
+
+r par exemple `C:\Users\Nom_Utilisateur\Desktop\projects`
+
+
+## laravel
+
+q quelle commande faut-il taper pour créer un projet ?
+
+r composer create-project laravel/laravel nom_du_projet
+
+
+q Dans `laravel/laravel` à quoi correspond le `laravel` AVANT le slash `/` ?
+
+r C'est le nom l'auteur du code (c-à-d le nom d'utilisateur sur github)
+
+
+q Dans `laravel/laravel` à quoi correspond le `laravel` APRÈS le slash `/` ?
+
+r C'est le nom du projet créé par l'auteur du code (c-à-d le nom du projet sur github)
+
+
+q Quelles sont les étapes de création d'un nouveau projet laravel ?
+
+r 1. ouvrir le dossier dans vscode
+  2. `npm install`
+  3. modifier le fichier `.env` (nom du projet, fuseau horaire, langue)
+  4. configurer laravel pour l'utilisation de MySQL ou MariaDB (fichier `.env` et `php artisan migrate`, `config/database.php`)
+
+
+q À quoi sert le fichier `resources/views/base.blade.php` ?
+
+r Aléger le vues en mettant tout le HTML en commun entre toutes les pages dans `base.blade.php`
+
+
+q Comment créer une nouvelle page web ?
+
+r 1. Créer un nouveau fichier `foo.blade.php` dans le dossier `resources/views/`
+  2. Ajouter `@extends('base')` dans le fichier `blade`
+  3. Insérer du code HTML dans les balises sections (par exemple `@section('content')`)
+
+
+q Quelle est la différence entre `@section() @show` et `@yield()` ?
+
+r Les deux permettent aux templates enfants de modifier le template parent. La balise `@section() @show` permet de définir un contenu par défaut sur plusieurs lignes alors que `@yield()` permet de définir un contenu par défaut sur une seule ligne
+
+
+q Quelles commandes taper pour voir le projet dans un navigateur ?
+
+r 1. ouvrir deux terminaux
+  2. `php artisan serve` (serveur web)
+  3. `npm run dev` (compiler les fichiers css et js)
+
+
+q Est-ce qu'un contrôleur peut transmettre une variable à une vue ?
+
+r Oui
+
+
+q Est-ce qu'une variable doit forcément avoir le même nom dans le contrôleur et dans la vue ?
+
+r Non. C'est recommandé mais pas obligatiore
+
+
+q Quelle fonction utiliser pour récupérer un élément de la BDD à partir de son id (clé primaire) ?
+
+r Il faut utiliser le modèle et la fonction `find()` (exemple `Actu::find(1)`)
+
+
